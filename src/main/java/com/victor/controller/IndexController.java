@@ -1,6 +1,6 @@
 package com.victor.controller;
 
-import org.springframework.stereotype.Component;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,10 +14,15 @@ public class IndexController {
 		System.out.println("***********************************");
 	}
 
-	@RequestMapping(value="/hello.html")
+	@RequestMapping(value="/index")
 	public String index(){
 		System.out.println("test");
-		return "WEB-INF/jsp/index.jsp";
+		return "index";
+	}
+	@RequestMapping(value="/test.html", method=RequestMethod.GET)
+	public String test(){
+		System.out.println("test");
+		return "hello";
 	}
 	
 }
